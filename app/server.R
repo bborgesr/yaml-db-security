@@ -1,9 +1,8 @@
 
 library(shiny)
 library(pool)
-library(yaml)
 
-credentials <- yaml.load_file("../db.yml")
+credentials <- yaml::yaml.load_file("../db.yml")
 
 pool <- NULL
 try( pool <- dbPool(
